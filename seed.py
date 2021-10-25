@@ -16,7 +16,7 @@ def hashed(pwd):
 
 u1 = User(
     username="jimjam5227",
-    password=hashed('Agnusdei1968!'),
+    password=hashed('test'),
     email="jimjam5227@gmail.com",
     first_name="Jimmy",
     last_name="Yee"
