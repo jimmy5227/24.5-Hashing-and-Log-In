@@ -1,5 +1,5 @@
 from app import app
-from models import db, User
+from models import db, User, Feedback
 from flask_bcrypt import Bcrypt
 
 
@@ -22,6 +22,33 @@ u1 = User(
     last_name="Yee"
 )
 
+u2 = User(
+    username="mrmonkey1",
+    password=hashed('mrmonkey1'),
+    email="MojoJojo1@mojojo.com",
+    first_name="Mojo",
+    last_name="Jojo"
+)
 
-db.session.add(u1)
+u3 = User(
+    username="homersimpson",
+    password=hashed('homersimpson'),
+    email="homersimpson@homersimpson.com",
+    first_name="Homer",
+    last_name="Simpson"
+)
+
+f1 = Feedback(
+    title="My First Feedback",
+    content="It is I. Mojo Jojo!",
+    username="mrmonkey1"
+)
+
+f2 = Feedback(
+    title='Mmmmm Donuts',
+    content='(Drools)',
+    username='homersimpson'
+)
+
+db.session.add_all([u1, u2, u3, f1, f2])
 db.session.commit()

@@ -1,5 +1,5 @@
 from flask import Flask, request, flash, redirect, render_template, session
-from models import db, connect_db, User
+from models import db, connect_db, User, Feedback
 from forms import AddUserForm, LoginUserForm
 
 app = Flask(__name__)
@@ -59,12 +59,14 @@ def login():
     return render_template('login.html', form=form)
 
 
-@app.route('/users/<string:username>')
+@app.route('/users/<username>')
 def secret(username):
+    user = User.query.get(username)
+
     if "username" not in session:
         flash("Please login first!")
         return redirect('/')
-    return render_template('secret.html')
+    return render_template('secret.html', user=user)
 
 
 @app.route('/logout')
