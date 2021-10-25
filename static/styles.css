@@ -1,0 +1,164 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Cardo", serif;
+  background-color: #484d5c;
+}
+
+#content {
+  margin: auto 2em;
+}
+
+.navbar {
+  background-color: #c0ccd4;
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #484d5c;
+  color: #ffce00;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  color: #ffce00;
+}
+
+.alert {
+  font-size: 120%;
+  font-weight: bold;
+  background-color: #ff3c00;
+}
+
+span.error {
+  font-size: 75%;
+  color: #ff3c00;
+}
+
+.alert-success {
+  font-size: 120%;
+  font-weight: bold;
+  padding: none;
+  background-color: #09bb59;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #c0ccd4;
+  padding: 20px;
+  justify-content: flex-start;
+}
+
+div p {
+  font-size: 125%;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* background-color: #003049; */
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  /* border: 5px solid #003049; */
+  align-items: flex-start;
+}
+
+li {
+  display: flex;
+  flex: 0 1 24%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.lower-base {
+  border-radius: 30px;
+  background-color: #09bb59;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 75%;
+}
+
+label {
+  display: block;
+}
+
+input {
+  display: block;
+  border: 2px solid #6b654e;
+  border-radius: 4px;
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: solid #ffce00 2px;
+}
+
+select {
+  display: block;
+  border: 2px solid #6b654e;
+  border-radius: 4px;
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: solid #ffce00 2px;
+}
+
+button {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #484d5c;
+  color: #ffce00;
+}
+
+.edit {
+  padding: 1px 5px;
+  font-size: 13px;
+  background-color: #484d5c;
+  color: #ffce00;
+}
+
+button:hover.edit {
+  background-color: black;
+  color: white;
+}
