@@ -21,3 +21,10 @@ class LoginUserForm(FlaskForm):
                            InputRequired(message="Username cannot be empty")])
     password = PasswordField("Password", validators=[
                              InputRequired(message="Password cannot be empty")])
+
+
+class AddFeedbackForm(FlaskForm):
+    title = StringField("Title", validators=[
+                        InputRequired(message="Title cannot be empty")])
+    content = StringField("Content", validators=[
+                          InputRequired(message="Content cannot be empty")])

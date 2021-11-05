@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
-{% block title %} Sign Up {% endblock %}
+{% block title %} Edit Feedback {% endblock %}
 {% block content %}
-<h1>Sign Up</h1>
+<h1>Edit Current Feedback</h1>
 
-{% for msg in get_flashed_messages() %}
+<!-- {% for msg in get_flashed_messages() %}
 <div class="alert-success">
     {{msg}}
 </div>
 <p></p>
-{% endfor %}
+{% endfor %} -->
 
 <div>
     <form method="post">
-        <h2>Sign Up Form</h2>
+        <h2>Change Feedback</h2>
         {{form.hidden_tag()}}
 
         {% for field in form
@@ -27,7 +27,7 @@
         </p>
         {% endfor %}
 
-        <button type="submit">Register</button>
+        <button type="submit">Change Feedback</button>
     </form>
 </div>
 
