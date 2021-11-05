@@ -5,9 +5,9 @@ import os
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql:///users"
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL", "postgresql:///users")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-app.config['SECRET_KEY'] = os.environ.get('HelloWorld', 'HelloWorld')
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'HelloWorld')
 
 
 connect_db(app)
