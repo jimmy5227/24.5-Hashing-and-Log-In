@@ -1,12 +1,14 @@
 from flask import Flask, request, flash, redirect, render_template, session
 from models import db, connect_db, User, Feedback
 from forms import AddUserForm, LoginUserForm, AddFeedbackForm
+import os
 
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql:///users"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-app.config['SECRET_KEY'] = 'HelloWorld'
+app.config['SECRET_KEY'] = os.environ.get('HelloWorld', 'HelloWorld')
+
 
 connect_db(app)
 
